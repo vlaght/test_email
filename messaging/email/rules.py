@@ -16,10 +16,6 @@ def delete_offer_sentences(content):
     content = offer_re.sub('', content, count=0)
     return content
 
-@RuleRegistry.add_rule('gmail')
-def uppercase(content):
-    return content.upper()
-
 @RuleRegistry.add_rule('mail')
 def replace_gif_extension(content):
     img_tag_re = re.compile(
